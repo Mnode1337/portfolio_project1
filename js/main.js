@@ -29,3 +29,22 @@ function closemenu() {
 function openmenu() {
     sidemenu.style.right = "0";
 }
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxzE-2Q15tFk5c7G8wy-I_Wr6oXh7oIfDAMGzjmqeXJV0UAT5pr96MCVevzwxC4vVgM/exec'
+const form = document.forms['submit-to-google-sheet']
+
+const msg = document.getElementById('msg')
+
+form.addEventListener('submit', e => {
+e.preventDefault()
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    //.then(response => console.log('Success!', response))
+    .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(() => {
+            msg.innerHTML = ""
+        }, 5000)
+        form.reset()
+    })
+    .catch(error => console.error('Error!', error.message))
+})

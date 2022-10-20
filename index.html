@@ -23,19 +23,19 @@
                 <ul id="sidemenu">
 
                     <li>
-                        <a href="#">Home</a>
+                        <a href="#header">Home</a>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <a href="#about">About</a>
                     </li>
                     <li>
-                        <a href="#">Services</a>
+                        <a href="#services">Services</a>
                     </li>
                     <li>
-                        <a href="#">Portfolio</a>
+                        <a href="#portfolio">Portfolio</a>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#contact">Contact</a>
                     </li>
 
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
@@ -297,17 +297,19 @@
 
                 <div class="contact-right">
 
-                    <form>
+                    <form name="submit-to-google-sheet" method="POST">
 
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="You Message" rows="6" placeholder="Your Message"></textarea>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
 
                         <button type="submit" class="btn btn2">
                             Submit
                         </button>
 
                     </form>
+
+                    <span id="msg"></span>
 
                 </div><!-- end contact-right -->
 

@@ -12,7 +12,11 @@
     --GRAYISH: #ababab;
     --LIGHT-RED: #b54769;
     --BG-COLOR: #262626;
-   }
+}
+
+html {
+  scroll-behavior: smooth;
+} 
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -483,6 +487,12 @@ nav ul li a:hover::after {
       }
 
 
+  }
+
+  #msg {
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
   }
 
 
