@@ -1,5 +1,7 @@
 let tablinks = document.querySelectorAll(".tab-links");
 let tabcontents = document.querySelectorAll(".tab-contents");
+let sidemenu = document.getElementById("sidemenu");
+
 
 function opentab(tabname) {
 
@@ -18,4 +20,12 @@ function opentab(tabname) {
     //console.log(result);
     document.querySelector(result).classList.add("active-tab")
     
+}
+
+function closemenu() {
+    sidemenu.style.right = "-200px";
+}
+
+function openmenu() {
+    sidemenu.style.right = "0";
 }
